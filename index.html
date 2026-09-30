@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PollVote - Polling & Voting App</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            Poll<span>Vote</span>
+        </div>
+
+        <p>Create • Vote • See Results</p>
+    </header>
+
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Create Poll Section -->
+        <section class="create-section">
+
+            <h1>Create a Poll</h1>
+
+            <input
+                type="text"
+                id="question"
+                placeholder="Enter your poll question"
+            >
+
+            <div id="optionsContainer">
+
+                <input
+                    type="text"
+                    class="option"
+                    placeholder="Option 1"
+                >
+
+                <input
+                    type="text"
+                    class="option"
+                    placeholder="Option 2"
+                >
+
+            </div>
+
+            <div class="button-group">
+
+                <button
+                    onclick="addOption()"
+                    class="secondary-btn"
+                >
+                    + Add Option
+                </button>
+
+                <button
+                    onclick="createPoll()"
+                    class="primary-btn"
+                >
+                    Create Poll
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- Available Polls -->
+        <section>
+
+            <div class="section-title">
+
+                <h2>Available Polls</h2>
+
+                <button
+                    onclick="clearAllPolls()"
+                    class="clear-btn"
+                >
+                    Clear All
+                </button>
+
+            </div>
+
+            <div id="pollList"></div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 PollVote | VEDA Technology Internship
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
